@@ -2,7 +2,7 @@
 set -e
 SHELL_FOLDER=$(cd "$(dirname "$0")";pwd)
 
-source ~/proxy.sh # use bash please
+# source ~/proxy.sh # use bash please
 if [ ! -f "/usr/local/bin/helm" ]; then
     echo "getting helm"
     curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash

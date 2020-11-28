@@ -40,7 +40,10 @@ if [ ! -f "$clashpath" ]; then #~/clash can't switch to /home/ubuntu
     echo "get config finish"
 fi
 
-[ ! -f /home/ubuntu/proxy.sh ] && cp $SHELL_FOLDER/proxy.sh ~
+[ ! -f /home/ubuntu/proxy.sh ] && cp $SHELL_FOLDER/proxy.sh ~ && cat >> ~/.bashrc<<EOF
+
+source ~/proxy.sh
+EOF
 
 # f_getconfig
 # cd $clashdir
