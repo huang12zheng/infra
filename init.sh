@@ -8,7 +8,7 @@ f_alias(){
 
 [ -z "$findkey" ] && cat >> ~/.bashrc<<EOF
 
-source $SHELL_FOLDER/.alias
+source $SHELL_FOLDER/alias.sh
 EOF
 }
 
