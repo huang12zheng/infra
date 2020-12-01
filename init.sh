@@ -1,7 +1,10 @@
 set -e
+set -x
 SHELL_FOLDER=$(cd "$(dirname "$0")";pwd)
 f_alias(){
+    set +e
     findkey=`cat ~/.bashrc|grep alias.sh|grep source`
+    set -e
 
 [ -z "$findkey" ] && cat >> ~/.bashrc<<EOF
 
