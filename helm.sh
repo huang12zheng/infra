@@ -13,9 +13,21 @@ helmfile_install(){
     [ ! -f helmfile_linux_amd64 ] && wget $bin_url -O helmfile_linux_amd64 && chmod +x helmfile_linux_amd64
     sudo mv helmfile_linux_amd64 /usr/local/bin/helmfile # precondition: if [ ! -f "/usr/local/bin/helmfile" ]; then
 }
+
+# kustomize_install(){
+#     curl -s "https://raw.githubusercontent.com/\
+#     kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+#     sudo mv kustomize /usr/local/bin/kustomize
+# }
+
 if [ ! -f "/usr/local/bin/helmfile" ]; then
     echo "getting helmfile"
     helmfile_install
 fi
+
+# if [ ! -f "/usr/local/bin/kustomize" ]; then
+#     echo "getting kustomize"
+#     kustomize_install
+# fi
 
 helm plugin install https://github.com/databus23/helm-diff
