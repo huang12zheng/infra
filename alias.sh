@@ -2,7 +2,7 @@
 set -e
 SHELL_FOLDER=$(cd "$(dirname "$0")";pwd)
 
-alias gc=git clone
+alias gc='git clone'
 clashdir=/home/ubuntu/clash
 [ -f "$clashdir/clash" ] && alias clash="$clashdir/clash -d $clashdir"
 
@@ -12,3 +12,4 @@ clashdir=/home/ubuntu/clash
     alias hd="helmfile destroy" && \
     alias ht="helmfile template>template.yaml" && \
     alias hdebug="helmfile --debug template>template.yaml"
+set +e

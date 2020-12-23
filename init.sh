@@ -15,4 +15,4 @@ EOF
 f_alias
 
 sh $SHELL_FOLDER/clash/clash.sh
-bash $SHELL_FOLDER/helm.sh
+bash $SHELL_FOLDER/helm.sh || echo "helm run finish"
