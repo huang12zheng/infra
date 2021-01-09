@@ -18,5 +18,8 @@ f_alias
 cd $SHELL_FOLDER/clash
 sh ./clash.sh
 
+isRun=`ps aux | grep /home/ubuntu/clash/clash | grep d`
+[ -z "$isRun" ] && exit 1
+
 cd $SHELL_FOLDER
 bash $SHELL_FOLDER/helm.sh || echo "helm run finish"
