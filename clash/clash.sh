@@ -23,7 +23,7 @@ f_getfile() {
 
 f_getconfig() {
     cd $clashdir
-    mv config.yaml config.yaml.$(date +%s).bak
+    test -e config.yaml && mv config.yaml config.yaml.$(date +%s).bak
     wget -O config.yaml https://cylink.moe/link/MUokX7EIQF56YA2k?clash=1
 }
 
