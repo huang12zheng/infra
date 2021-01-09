@@ -6,7 +6,11 @@ f_alias(){
     touch ~/.bashrc
     findkey=`cat ~/.bashrc|grep alias.sh|grep source`
     # set -e
+<<<<<<< HEAD
 set +e # [ -z "$findkey" ]
+=======
+set +e
+>>>>>>> f054d1b585581550b6f162f2011ed85dac5818b5
 [ -z "$findkey" ] && cat >> ~/.bashrc<<EOF
 
 source $SHELL_FOLDER/alias.sh
